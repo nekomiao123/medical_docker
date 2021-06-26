@@ -1,0 +1,13 @@
+/Traindata
+.ipynb_checkpoints
+/model
+/__pycache__
+/wandb
+/test
+/output
+/pip_requirements.txt
+/ganmodel
+/pic
+/input
+/label
+/models

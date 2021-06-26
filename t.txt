@@ -1,0 +1,3 @@
+python eval.py ./output/acim9/Ch2_002_CH003_V/ ./label/point_labels/
+
+python eval.py /output/ /label/
