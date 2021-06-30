@@ -24,7 +24,7 @@ import argparse
 import ttach as tta
 
 # Specify the graphics card
-torch.cuda.set_device(0)
+torch.cuda.set_device(1)
 
 #check device
 def get_device():
@@ -120,7 +120,7 @@ def check_out(image_out,points_big,bboxs_big):
 
 def predict(model_path, test_loader, iftta):
 
-    model = torch.load(model_path, map_location='cuda:0')
+    model = torch.load(model_path, map_location='cuda:1')
     model = model.to(device)
     model.eval()
 
@@ -157,7 +157,7 @@ def main():
 
     batch_size = 16
     num_workers = 2
-    model_path = './models/intra_ResnextUnet.pt'
+    model_path = './models/intra_Diceloss.pt'
     test_dataset = Medical_Data_test(test_path, data_mode='simulator', set_mode='test')
     test_loader = torch.utils.data.DataLoader(
             dataset=test_dataset,
